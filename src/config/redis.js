@@ -1,6 +1,6 @@
 const redis = require('redis');
 const { promisify } = require('util');
-const { redisHost, redisPort } = require('./env-vars');
+const { redisHost, redisPort, redisPassword } = require('./env-vars');
 const logger = require('./logger');
 
 /**
@@ -10,6 +10,7 @@ const logger = require('./logger');
 const client = redis.createClient({
   host: redisHost,
   port: redisPort,
+  password: redisPassword,
 });
 
 /**
