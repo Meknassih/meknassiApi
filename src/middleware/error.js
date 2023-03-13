@@ -17,8 +17,8 @@ const Handler = (err, req, res, next) => {
     stack: err.stack,
   };
   if (env === 'production') delete response.stack;
-  res.res.status(response.code).json(response);
-  res.res.end();
+  res.status(response.code).json(response);
+  res.end();
 };
 
 exports.ErrorHandler = Handler;
