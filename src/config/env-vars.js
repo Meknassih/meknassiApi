@@ -15,7 +15,10 @@ module.exports = {
   jwtSecret: process.env.JWT_SECRET,
   jwtExpirationInterval: process.env.JWT_EXPIRATION_MINUTES,
   mongo: {
-    uri: process.env.NODE_ENV === 'development' ? process.env.MONGO_URI_TEST : process.env.MONGO_URI,
+    uri:
+      process.env.NODE_ENV === 'development'
+        ? process.env.MONGO_URI_TEST
+        : process.env.MONGO_URI,
     options: {
       keepAlive: 1000,
       autoReconnect: true,
@@ -25,6 +28,10 @@ module.exports = {
       useCreateIndex: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
+      dbName:
+        process.env.NODE_ENV === 'development'
+          ? process.env.MONGO_DB_TEST
+          : process.env.MONGO_DB,
     },
   },
   rateLimitTime: process.env.RATE_LIMIT_TIME,

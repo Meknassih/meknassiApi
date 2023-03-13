@@ -13,7 +13,6 @@
     "url": "https://github.com/shekhar-raval/node-express-es8.git"
   },
   "scripts": {
-    "precommit": "npm run lint && npm run test",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "lint": "eslint '**/*.js' --ignore-pattern internals/scripts --ignore-path .gitignore",
@@ -33,34 +32,6 @@
   },
   "author": "Raval Shekhar",
   "license": "MIT",
-  "keywords": [
-    "express",
-    "node",
-    "node.js",
-    "mongodb",
-    "mongoose",
-    "passport",
-    "es6",
-    "es7",
-    "es8",
-    "es2017",
-    "mocha",
-    "istanbul",
-    "nyc",
-    "eslint",
-    "Travis CI",
-    "coveralls",
-    "REST",
-    "API",
-    "boilerplate",
-    "generator",
-    "starter project"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run test"
-    }
-  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
